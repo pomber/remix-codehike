@@ -8,7 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
-  useLocation
+  useLocation,
 } from "remix";
 
 import deleteMeRemixStyles from "~/styles/demos/remix.css";
@@ -29,9 +29,9 @@ export let links = () => {
     {
       rel: "stylesheet",
       href: darkStylesUrl,
-      media: "(prefers-color-scheme: dark)"
+      media: "(prefers-color-scheme: dark)",
     },
-    { rel: "stylesheet", href: deleteMeRemixStyles }
+    { rel: "stylesheet", href: deleteMeRemixStyles },
   ];
 };
 
@@ -76,32 +76,27 @@ function Layout({ children }) {
     <div className="remix-app">
       <header className="remix-app__header">
         <div className="container remix-app__header-content">
-          <Link to="/" title="Remix" className="remix-app__header-home-link">
+          <a
+            href="https://remix.run/"
+            title="Remix"
+            className="remix-app__header-home-link"
+          >
             <RemixLogo />
-          </Link>
-          <nav aria-label="Main navigation" className="remix-app__header-nav">
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <a href="https://remix.run/docs">Remix Docs</a>
-              </li>
-              <li>
-                <a href="https://github.com/remix-run/remix">GitHub</a>
-              </li>
-            </ul>
-          </nav>
+          </a>
+          +
+          <a
+            href="https://github.com/code-hike/codehike/"
+            title="Code Hike"
+            className="remix-app__header-home-link"
+          >
+            <CodeHikeLogo />
+            Code Hike
+          </a>
         </div>
       </header>
       <div className="remix-app__main">
         <div className="container remix-app__main-content">{children}</div>
       </div>
-      <footer className="remix-app__footer">
-        <div className="container remix-app__footer-content">
-          <p>&copy; You!</p>
-        </div>
-      </footer>
     </div>
   );
 }
@@ -157,6 +152,19 @@ export function ErrorBoundary({ error }) {
         </div>
       </Layout>
     </Document>
+  );
+}
+
+function CodeHikeLogo(props) {
+  return (
+    <svg viewBox="-100 -100 200 200" fill="#2563eb" {...props} height="2.5rem">
+      <path d="M 70 60 L 42 -27 L 72 -27 L 100 60 Z" />
+      <path d="M 20.419540229885058 40.05357142857142 L 42 -27 L 72 -27 L 50.41954022988506 40.05357142857142 Z" />
+      <path d="M 20.419540229885058 40.05357142857142 L -15 -70 L 15 -70 L 50.41954022988506 40.05357142857142 Z" />
+      <path d="M -50.41954022988506 40.05357142857142 L -15 -70 L 15 -70 L -20.419540229885058 40.05357142857142 Z" />
+      <path d="M -50.41954022988506 40.05357142857142 L -72 -27 L -42 -27 L -20.419540229885058 40.05357142857142 Z" />
+      <path d="M -100 60 L -72 -27 L -42 -27 L -70 60 Z" />
+    </svg>
   );
 }
 
@@ -231,7 +239,7 @@ const RouteChangeAnnouncement = React.memo(() => {
         position: "absolute",
         width: "1px",
         whiteSpace: "nowrap",
-        wordWrap: "normal"
+        wordWrap: "normal",
       }}
     >
       {innerHtml}

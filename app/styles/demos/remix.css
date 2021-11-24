@@ -16,18 +16,24 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--color-border);
+  font-size: 32px;
 }
 
 .remix-app__header-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .remix-app__header-home-link {
-  width: 106px;
   height: 30px;
   color: var(--color-foreground);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .remix-app__header-nav ul {
@@ -44,6 +50,11 @@
 
 .remix-app__main {
   flex: 1 1 100%;
+}
+
+.remix-app__main-content {
+  width: 900px;
+  margin: 0 auto;
 }
 
 .remix-app__footer {
