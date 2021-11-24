@@ -13,7 +13,6 @@ import {
 
 import deleteMeRemixStyles from "~/styles/demos/remix.css";
 import globalStylesUrl from "~/styles/global.css";
-import darkStylesUrl from "~/styles/dark.css";
 import codeHikeStylesUrl from "@code-hike/mdx/dist/index.css";
 
 /**
