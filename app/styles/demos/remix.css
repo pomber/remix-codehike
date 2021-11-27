@@ -129,3 +129,8 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
+code {
+  font-size: 16px;
+  line-height: 25px;
+}
