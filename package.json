@@ -10,7 +10,7 @@
     "start": "vercel dev"
   },
   "dependencies": {
-    "@code-hike/mdx": "0.3.0--canary.77.c8f7b29.0",
+    "@code-hike/mdx": "0.3.0--canary.77.5617b6a.0",
     "@remix-run/react": "^1.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
